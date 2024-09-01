@@ -1,0 +1,28 @@
+### make order
+POST http://localhost:8080/api/orders
+Content-Type: application/json
+
+{
+  "customerId": 1,
+  "orderProducts": [{
+    "productId": 1,
+    "quantity": 20
+  },{
+    "productId": 2,
+    "quantity": 3
+  }]
+}
+
+### validate products
+POST http://localhost:8081/api/product/validate
+Content-Type: application/json
+
+{
+  "products": [{
+    "productId": 1,
+    "quantity": 20
+  },{
+    "productId": 2,
+    "quantity": 3
+  }]
+}
